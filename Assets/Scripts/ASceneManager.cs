@@ -36,10 +36,7 @@ public class ASceneManager : MonoBehaviour {
 	}
 
 	public void ReadyCameraCallback() {
-		if (this == null) {
-			Debug.Log ("<color=green>OMG!!! this is null !!!</color>");
-		}
-		Invoke ("ShowScorePanel", 1.5f);
+		ShowScorePanel ();
 	}
 
 	private void GameStart() {
@@ -50,5 +47,15 @@ public class ASceneManager : MonoBehaviour {
 		Debug.Log ("<color=green>show score panel</color>");
 		scorePanel.SetActive (true);
 		Invoke("GameStart", 0.5f);
+	}
+
+	void OnApplicationQuit () {
+		Debug.Log ("<color=green>ASceneManager - OnApplicationQuit</color>");
+	}
+	void OnDisable () {
+		Debug.Log ("<color=green>ASceneManager - OnDisable</color>");
+	}
+	void OnDestroy () {
+		Debug.Log ("<color=green>ASceneManager - OnDestroy</color>");
 	}
 }
