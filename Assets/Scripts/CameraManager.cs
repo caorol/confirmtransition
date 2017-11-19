@@ -12,7 +12,7 @@ public class CameraManager : MonoBehaviour {
 	public int waitStart = 3;
 
 	public delegate void Callback ();
-	public static event Callback Done;
+	public event Callback Done;
 
 	private int frameCount = 80;
 	private Transform self;

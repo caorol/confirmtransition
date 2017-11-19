@@ -10,7 +10,7 @@ public class ASceneManager : MonoBehaviour {
 	void Awake () {
 		Debug.Log ("<color=green>ASceneManager - Awake</color>");
 		cameraManager = GameObject.Find ("Main Camera").GetComponent<CameraManager> ();
-		CameraManager.Done += ReadyCameraCallback;
+		cameraManager.Done += ReadyCameraCallback;
 
 		string canvasName = "Canvas";
 		string scorePanelName = "ScorePanel";
