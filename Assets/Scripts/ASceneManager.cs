@@ -57,5 +57,6 @@ public class ASceneManager : MonoBehaviour {
 	}
 	void OnDestroy () {
 		Debug.Log ("<color=green>ASceneManager - OnDestroy</color>");
+        CameraManager.Done -= ReadyCameraCallback;
 	}
 }
